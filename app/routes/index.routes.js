@@ -1,16 +1,14 @@
 const express = require('express');
 const router = express.Router();
 
-router.get('/', (req, res)=>{
-    res.render('index');
-});
+const indexRouter = require('../controllers/index.controller');
 
-router.get('/exp', (req, res)=>{
-    res.render('exp');
-});
+router.get('/', indexRouter.home);
 
-router.get('/project', (req, res)=>{
-    res.render('project');
-});
+router.get('/exp', indexRouter.exp);
+
+router.get('/project', indexRouter.project);
+
+router.get('/freelance', indexRouter.freelance);
 
 module.exports = router;

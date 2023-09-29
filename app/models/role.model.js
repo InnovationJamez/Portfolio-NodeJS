@@ -5,6 +5,6 @@ const roleSchema = new mongoose.Schema({
         type: String,
         required: true
     }
-}, {collection: 'Portfolio'});
+});
 
 module.exports = mongoose.model("Role", roleSchema);

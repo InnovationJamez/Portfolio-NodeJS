@@ -1,18 +1,33 @@
 const mongoose = require('mongoose');
 
 const blogSchema = new mongoose.Schema({
+    user: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "User"
+    },
     title: {
         type: String,
         required: true
     },
-    body: {
+    snippet: {
+        type: String,
+        required: true
+    },
+    content: {
         type: String,
         required: true
     },
     publishDate: {
         type: Date,
-        required: true,
         default: Date.now
+    },
+    blogImage: {
+        type: Buffer,
+        required: true
+    },
+    blogImageType: {
+        type: String,
+        required: true
     },
     comments: [
         {
@@ -20,6 +35,13 @@ const blogSchema = new mongoose.Schema({
             ref: "Comment",
         }
     ]
-}, {collection: 'Portfolio'});
+});
+
+blogSchema.virtual('coverImagePath').get(function(){
+    if(this.blogImage != null && this.blogImageType != null){
+        let src = `data:${this.blogImageType};charset=utf-8;base64,${this.blogImage.toString('base64')}`;
+        return src;
+    }
+});
 
 module.exports = mongoose.model("Blog", blogSchema);

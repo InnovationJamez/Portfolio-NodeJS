@@ -1,0 +1,12 @@
+<% if(locals.projects && projects.length > 0){ %>
+    <div class="proj">
+        <% projects.forEach(proj => { %>
+            <div class="proj-item"><%= proj.name %></div>
+            <div class="proj-item"><%= proj.desc %></div>
+            <div class="proj-item"><%= proj.git %></div>
+            <div class="proj-item"><%= proj.link %></div>
+        <% }); %>
+    </div>
+<% } else { %>
+    <div class="error">Failed to load projects</div>
+<% } %>

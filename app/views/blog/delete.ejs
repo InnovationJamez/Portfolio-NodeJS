@@ -1,0 +1,9 @@
+<h2>Delete Blog</h2>
+
+<%- include('./_blog_info.ejs') %>
+
+<a href="/blog/details/<%= blog.id %>">Cancel</a>
+
+<form method="POST" action="/blog/<%= blog.id %>?_method=DELETE">
+    <button type="submit">Delete</button>
+</form>

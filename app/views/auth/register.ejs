@@ -1,0 +1,16 @@
+<form action="/auth/register" method="POST" autocomplete="on">
+
+
+    <%- include('./nameForm.ejs') %>
+    <%- include('./authForm.ejs', {newPassword: true}) %>
+
+    <div class="form-row">
+        <label for="passwordTwo">Retype Password: </label>
+        <input type="password" id="passwordTwo" name="passwordTwo" 
+        required autocomplete="new-password">
+    </div>
+
+    <div class="btn-row">
+        <input type="submit" value="Register">
+    </div>
+</form>

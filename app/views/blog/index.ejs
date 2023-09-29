@@ -1,0 +1,16 @@
+<h2>All Blogs</h2>
+
+<% if(blogs && blogs.length > 0){ %>
+    <% blogs.forEach(element => { %>
+        <div>
+            <h3><%= element.title %></h3>
+            <p><%= element.snippet %></p>
+            <a href="/blog/details/<%= element.id %>">Read</a>
+        </div>
+
+    <% }); %>
+<% } %>
+
+<% if(user){ %>
+    <a href="/blog/create">Create Blog</a>
+<% } %>

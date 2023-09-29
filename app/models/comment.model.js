@@ -7,10 +7,14 @@ const commentSchema = new mongoose.Schema({
         ref: "User",
         required: true,
     },
-    text: {
+    content: {
         type: String,
         required: true
+    },
+    date: {
+        type: Date,
+        default: Date.now
     }
-}, {collection: 'Portfolio'});
+});
 
 module.exports = mongoose.model("Comment", commentSchema);

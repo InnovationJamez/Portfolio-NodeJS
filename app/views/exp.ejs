@@ -1,0 +1,49 @@
+<h1>Experience</h1>
+
+<h2>Work</h2>
+
+<% if(locals.data && data.work != null && data.work.length > 0){ %>
+    <div class="work-container">
+        <% data.work.forEach(element => { %>
+            <div class="work-item">
+                <h4><%= element.company %></h4>
+            </div>
+            <div class="work-item">
+                <p><%= element.role %></p> 
+            </div>
+            <div class="work-item">
+                <p><%= element.dates %></p>
+            </div>
+            <div class="work-item">
+                <p><%= element.desc %></p>
+            </div>
+        <% }); %>
+    </div>
+<% } else { %>
+    <div class="error">Failed to load work</div>
+<% } %>
+
+<h2>Educaiton</h2>
+
+<% if(locals.data && data.education != null && data.education.length > 0) { %>
+    <div class="education-container">
+        <% data.education.forEach(element => { %>
+            <div class="education-item">
+                <h4><%= element.school %></h4>
+            </div>
+            <div class="education-item">
+                <p><%= element.degree %></p>
+            </div>
+            <div class="education-item">
+                <p><%= element.dates %></p>
+            </div>
+            <div class="education-item">
+                <p><%= element.desc %></p> 
+            </div>
+        <% }); %>
+    </div>
+<% } else { %>
+    <div class="error">Failed to load work</div>
+<% } %>
+
+

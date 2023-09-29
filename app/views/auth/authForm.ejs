@@ -1,0 +1,13 @@
+<% let tag = (newPassword) ? 'new-password' : 'current-password' %>
+
+<div class="form-row">
+    <label for="username">Username</label>
+    <input type="email" id="username" name="username" 
+        required autocomplete="username">
+</div>
+
+<div class="form-row">
+    <label for="password">Password</label>
+    <input type="password" id="password" name="password" 
+    minlength="8" maxlength="30" required autocomplete="<%= tag %>">
+</div>

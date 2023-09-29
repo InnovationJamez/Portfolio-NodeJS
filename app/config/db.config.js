@@ -3,5 +3,5 @@ if(process.env.NODE_ENV !== "development"){
 }
 
 module.exports = {
-    dbUrl: `mongodb+srv://${process.env.USER_NAME}:${process.env.DB_PASSWORD}@${process.env.DB_NAME}.sv0xg.mongodb.net/?retryWrites=true&w=majority`,
+    dbUrl: `mongodb+srv://${process.env.USER_NAME}:${process.env.DB_PASSWORD}@${process.env.DB_NAME}.sv0xg.mongodb.net/${process.env.DB}?retryWrites=true&w=majority`,
 }

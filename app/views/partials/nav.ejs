@@ -3,7 +3,22 @@
         <li><a href="/">Home</a></li>
         <li><a href="/exp">Experience</a></li>
         <li><a href="/project">Projects</a></li>
-        <li><a href="/skill">Skills</a></li>
+        <li><a href="/freelance">Freelance</a></li>
         <li><a href="/blog">Blog</a></li>
+
+        <% if(!user){ %>
+            <li><a href="/auth/login">Login</a></li>
+            <li><a href="/auth/register">Register</a></li>
+        <% } %>
     </ul>
+
+    <% if(user){ %>
+        <h2>Greetings <%= user.local.firstName %></h2>
+        <div>
+            <a href="#">Profile</a>
+            <form action="/auth/logout?_method=DELETE" method="POST">
+                <button type="submit">Logout</button>
+            </form>
+        </div>
+    <% } %>
 </nav>

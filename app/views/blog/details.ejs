@@ -1,0 +1,30 @@
+<h2>Blog details</h2>
+
+<%- include('./_blog_info.ejs') %>
+
+<% if(user){ %>
+    <a href="/blog/edit/<%= blog.id %>">Edit Blog</a>
+    <a href="/blog/delete/<%= blog.id %>">Delete Blog</a>
+<% } %>
+
+<% if(blog.comments.length > 0){ %>
+    <h3>Comments</h3>
+    <% blog.comments.forEach(comment => { %>
+        <h4> <%= comment.user.local.firstName %></h4>
+        <p><%= comment.content %></p>
+        <form method="POST" action="/comment/<%= comment.id %>/<%= blog.id %>?_method=DELETE">
+            <input hidden name="blogId" value="<%= blog.id %>">
+            <button type="submit">Delete Comment</button>
+        </form>
+    <% }); %>
+<% } else { %>
+    <p> No comments yet</p>
+<% } %>
+
+<% if(user){ %>
+    <form action="/comment/create" method="POST">
+        <textarea name="comment" required></textarea>
+        <input hidden name="blogId" value="<%= blog.id %>">
+        <button type="submitt">Post</button>
+    </form>
+<% } %>
