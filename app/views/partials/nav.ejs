@@ -6,19 +6,20 @@
         <li><a href="/freelance">Freelance</a></li>
         <li><a href="/blog">Blog</a></li>
 
-        <% if(!user){ %>
-            <li><a href="/auth/login">Login</a></li>
-            <li><a href="/auth/register">Register</a></li>
-        <% } %>
+        <% if(user){ %>
+            <li class="right-side dropdown">
+                <a href="javascript:void(0)" class="dropdown-btn">Greetings <%= user.local.firstName %></a>
+                <div class="dropdown-content">
+                    <a href="#">Profile</a>  
+                    <a href="#">Settings</a> 
+                    <form action="/auth/logout?_method=DELETE" method="POST">
+                        <button class="nav-btn" type="submit">Logout</button>
+                    </form>
+                </div>
+            </li>
+        <% } else { %>
+            <li class="right-side"><a href="/auth/login">Login</a></li>
+            <li class="right-side"><a href="/auth/register">Register</a></li>
+        <% } %>  
     </ul>
-
-    <% if(user){ %>
-        <h2>Greetings <%= user.local.firstName %></h2>
-        <div>
-            <a href="#">Profile</a>
-            <form action="/auth/logout?_method=DELETE" method="POST">
-                <button type="submit">Logout</button>
-            </form>
-        </div>
-    <% } %>
 </nav>

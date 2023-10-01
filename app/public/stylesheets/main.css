@@ -1,0 +1,26 @@
+@import './shared/navbar.css';
+@import './shared/exp.css';
+
+
+body {
+    font-family: Helvetica, sans-serif;
+    background-color: black;
+}
+
+.waves {
+    z-index: -1;
+    position: fixed;
+    left: 0;
+    top: 0;
+}
+
+canvas {
+    position: fixed;
+}
+
+.home-title {
+    padding-top: 2rem;
+    margin: auto;
+    color: red;
+    text-align: center;
+}

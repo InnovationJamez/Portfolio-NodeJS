@@ -24,7 +24,7 @@ exports.home = (req, res) => {
 exports.exp = async (req, res) => {
     let data = await loadJSON();
     res.render('exp', {
-        data: data,
+        experience: data.experience,
         user: req.user
     });
 }
@@ -33,8 +33,8 @@ exports.exp = async (req, res) => {
 exports.project = async (req, res) => {
     let data = await loadJSON();
     res.render('project', {
-        projects: data.projects,
-        user: req.user
+        user: req.user,
+        projects: data.project
     });
 }
 

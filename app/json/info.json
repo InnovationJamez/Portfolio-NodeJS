@@ -1,46 +1,51 @@
 {
-    "work":[
+    "experience":[
         {
-            "company": "TCS: Tata Consultancy Services",
-            "role": "Computer Engineer",
-            "dates": "February 2021 - September 2022",
-            "desc": "Utilize knowledge of technology and troubleshooting to assist clients. Provision access to bank applications though microsoft platform. Develop web applications with Java, SQL, Angular, Node.js, and MongoDB."
+            "institute": "Self Employed",
+            "status": "Full Stack Web developer",
+            "dates": "March 2023 - Now",
+            "desc": "Develop stunning and cool websites for my clients. Offering many features including but not limited to slyish interface, custom domain name, database connection, and login/registation."
         },
         {
-            "company": "EChO: ECho Eradicate Childhood Obesity Fountation",
-            "role": "AR Developer",
-            "dates": "August 2019 - December 2019",
-            "desc": "Develop applications with Unity, C#, and Xcode on android and iOS devices. Integrate AR technology into applications for a more unique and engaging gameplay experience. Engineered a program in C++ so parse csv database and extract essential info for the SugarMon application to run."
-        },
-        {
-            "company": "Wentworth Institure of Technology",
-            "role": "WEB DEVELOPMENT COOP",
-            "dates": "September 2019 - December 219",
-            "desc": "Create interactive educational applications with HTML, CSS, and Google App Script. Utilize HTML Canvas, event listeners, and animation loop to simulate electrical fields and current in capacitors."
-        }
-    ],
-    "education":[
-        {
-            "school":"Education First",
-            "degree":"COURSE A2 - A3 Level",
+            "institute":"Education First",
+            "status":"COURSE A2 - A3 Level",
             "dates":"September 2022 - February 2023",
             "desc":"Became immersed in language and culture while living in Japan. Learned how to communicate and navigate in a second language."
         },
         {
-            "school":"Wentworth Institure of Technology",
-            "degree":"BACHELORS OF SCIENCE IN COMPUTER ENGINEERING",
-            "dates":"September 2019 - December 2019",
-            "desc":"Studied engineering principles and theory. Developed programs and applications with C, C++, JavaScript, HTML, CSS. Constructed circuits with breadboards, resistors, IC Chips, and capacitors."
+            "institute": "TCS: Tata Consultancy Services",
+            "status": "Computer Engineer",
+            "dates": "February 2021 - September 2022",
+            "desc": "Utilize knowledge of technology and troubleshooting to assist clients. Provision access to bank applications though microsoft platform. Develop web applications with Java, SQL, Angular, Node.js, and MongoDB."
         },
         {
-            "school":"Royal Melbourne Institute of Technology",
-            "degree":"STUDY ABROAD RMIT",
+            "institute":"Royal Melbourne Institute of Technology",
+            "status":"STUDY ABROAD RMIT",
             "dates":"July 2018 - November 2018",
             "desc":""
         },
         {
-            "school":"St. Johnsbury Academy",
-            "degree":"High School Diploma",
+            "institute": "EChO: ECho Eradicate Childhood Obesity Fountation",
+            "status": "AR Developer",
+            "dates": "August 2019 - December 2019",
+            "desc": "Develop applications with Unity, C#, and Xcode on android and iOS devices. Integrate AR technology into applications for a more unique and engaging gameplay experience. Engineered a program in C++ so parse csv database and extract essential info for the SugarMon application to run."
+        },
+
+        {
+            "institute": "Wentworth Institure of Technology",
+            "status": "WEB DEVELOPMENT COOP",
+            "dates": "September 2019 - December 2019",
+            "desc": "Create interactive educational applications with HTML, CSS, and Google App Script. Utilize HTML Canvas, event listeners, and animation loop to simulate electrical fields and current in capacitors."
+        },
+        {
+            "institute":"Wentworth Institure of Technology",
+            "status":"BACHELORS OF SCIENCE IN COMPUTER ENGINEERING",
+            "dates":"September 2019 - December 2019",
+            "desc":"Studied engineering principles and theory. Developed programs and applications with C, C++, JavaScript, HTML, CSS. Constructed circuits with breadboards, resistors, IC Chips, and capacitors."
+        },
+        {
+            "institute":"St. Johnsbury Academy",
+            "status":"High School Diploma",
             "dates":"September 2012 - July 2016",
             "desc":"Programming) with C++ while using command line and vim. Learned how to create a SQL database and normalize it to reduce data redundancy and improve data integrity."
         }
