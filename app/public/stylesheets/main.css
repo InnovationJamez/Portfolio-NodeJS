@@ -1,5 +1,14 @@
 @import './shared/navbar.css';
 @import './shared/exp.css';
+@import './shared/project.css';
+@import './shared/blog.css';
+@import './shared/form.css';
+@import './shared/anim.css';
+
+:root {
+    --fill-color: rgba(255, 255, 255, 0.7);
+    --text-color: rgb(255, 255, 255);
+}
 
 
 body {
@@ -21,6 +30,48 @@ canvas {
 .home-title {
     padding-top: 2rem;
     margin: auto;
-    color: red;
     text-align: center;
+}
+
+.freelance {
+    color: white;
+}
+
+.home-title h1 {
+    font-size: 5rem;
+    color: white;
+}
+
+.flip-container h2 {
+    color: gold;
+}
+
+.btn-row {
+    padding: 10px;
+}
+
+.btn {
+    border-radius: 10px;
+    padding: 10px;
+    margin-right: 5px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.entr-btn {
+    background-color: var(--fill-color);
+}
+
+.danger-btn {
+    background-color: red;
+}
+
+.error {
+    color: red;
+}
+
+
+.filepond--panel-root {
+    background-color: grey;
+    border: 1px solid black;
 }

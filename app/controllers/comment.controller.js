@@ -17,7 +17,6 @@ const postComment = async (req, res)=>{
         // get blog
         let blog = await Blog.findById(req.body.blogId);
 
-        console.log(newComment);z
         blog.comments.push(newComment.id);
         
         await blog.save();

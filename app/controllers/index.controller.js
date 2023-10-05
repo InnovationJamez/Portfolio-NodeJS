@@ -8,7 +8,7 @@ const loadJSON = async () => {
         const data = fs.readFileSync(jsonPath, 'utf8');
         return JSON.parse(data);
     }
-    catch(err) {
+    catch (err) {
         console.error(err);
     }
 }
@@ -16,7 +16,8 @@ const loadJSON = async () => {
 // home controller
 exports.home = (req, res) => {
     res.render('index', {
-        user: req.user
+        user: req.user,
+        link:"home"
     });
 }
 
@@ -25,7 +26,8 @@ exports.exp = async (req, res) => {
     let data = await loadJSON();
     res.render('exp', {
         experience: data.experience,
-        user: req.user
+        user: req.user,
+        link: "exp"
     });
 }
 
@@ -34,13 +36,15 @@ exports.project = async (req, res) => {
     let data = await loadJSON();
     res.render('project', {
         user: req.user,
-        projects: data.project
+        projects: data.projects,
+        link: "project"
     });
 }
 
 // freelance page
 exports.freelance = async (req, res) => {
     res.render('freelance', {
-        user: req.user
+        user: req.user,
+        link: "freelance"
     });
 }

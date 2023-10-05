@@ -1,25 +1,43 @@
+<% if(locals.link == null) { %>
+    <% link = 'home' %>
+<% } %>
+
 <nav>
     <ul>
-        <li><a href="/">Home</a></li>
-        <li><a href="/exp">Experience</a></li>
-        <li><a href="/project">Projects</a></li>
-        <li><a href="/freelance">Freelance</a></li>
-        <li><a href="/blog">Blog</a></li>
+        <li>
+            <a <% if(link=='home' ){ %>class="active"<% } %> href="/">Home</a>
+        </li>
+        <li>
+            <a <% if(link=='exp' ){ %>class="active"<% } %> href="/exp">Experience</a>
+        </li>
+        <li>
+            <a <% if(link=='project' ){ %>class="active"<% } %> href="/project">Projects</a>
+        </li>
+        <li>
+            <a <% if(link=='freelance' ){ %>class="active"<% } %> href="/freelance">Freelance</a>
+        </li>
+        <li>
+            <a <% if(link=='blog' ){ %>class="active"<% } %> href="/blog">Blog</a>
+        </li>
 
         <% if(user){ %>
             <li class="right-side dropdown">
                 <a href="javascript:void(0)" class="dropdown-btn">Greetings <%= user.local.firstName %></a>
                 <div class="dropdown-content">
-                    <a href="#">Profile</a>  
-                    <a href="#">Settings</a> 
-                    <form action="/auth/logout?_method=DELETE" method="POST">
+                    <a class="drop-item" href="#">Profile</a>
+                    <a class="drop-item" href="#">Settings</a>
+                    <form class="drop-item" action="/auth/logout?_method=DELETE" method="POST">
                         <button class="nav-btn" type="submit">Logout</button>
                     </form>
                 </div>
             </li>
-        <% } else { %>
-            <li class="right-side"><a href="/auth/login">Login</a></li>
-            <li class="right-side"><a href="/auth/register">Register</a></li>
-        <% } %>  
+            <% } else { %>
+                <li class="right-side">
+                    <a <% if(link=='login' ){ %>class="active"<% } %> href="/auth/login">Login</a>
+                </li>
+                <li class="right-side">
+                    <a <% if(link=='register' ){ %>class="active"<% } %> href="/auth/register">Register</a>
+                </li>
+            <% } %>
     </ul>
 </nav>

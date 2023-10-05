@@ -27,6 +27,7 @@
     position: relative;
     background-color: inherit;
     width: 50%;
+    color: white;
 }
 
 /* The circles on the timeline */
@@ -64,7 +65,7 @@
     right: 30px;
     border: medium solid white;
     border-width: 10px 0 10px 10px;
-    border-color: transparent transparent transparent white;
+    border-color: transparent transparent transparent var(--fill-color);
 }
 
 /* Add arrows to the right container (pointing left) */
@@ -78,7 +79,7 @@
     left: 30px;
     border: medium solid white;
     border-width: 10px 10px 10px 0;
-    border-color: transparent white transparent transparent;
+    border-color: transparent var(--fill-color) transparent transparent;
 }
 
 /* Fix the circle for containers on the right side */
@@ -89,7 +90,7 @@
 /* The actual content */
 .content {
     padding: 20px 30px;
-    background-color: white;
+    background-color: var(--fill-color);
     position: relative;
     border-radius: 6px;
 }

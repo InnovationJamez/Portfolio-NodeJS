@@ -1,0 +1,165 @@
+#check1 {
+    animation-name: appear1;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+#check2 {
+    animation-name: appear2;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+#check3 {
+    animation-name: appear3;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+#check4 {
+    animation-name: appear4;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+#check5 {
+    animation-name: appear5;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes appear1 {
+    from {
+        transform: scale(0);
+    }
+
+    20% {
+        transform: scale(1);
+    }
+
+    to {
+        transform: scale(1);
+    }
+}
+
+@keyframes appear2 {
+    from {
+        transform: scale(0);
+    }
+
+    20% {
+        transform: scale(0);
+    }
+
+    40% {
+        transform: scale(1);
+    }
+
+    to {
+        transform: scale(1);
+    }
+}
+
+@keyframes appear3 {
+    from {
+        transform: scale(0);
+    }
+
+    40% {
+        transform: scale(0);
+    }
+
+    60% {
+        transform: scale(1);
+    }
+
+    to {
+        transform: scale(1);
+    }
+}
+
+@keyframes appear4 {
+    from {
+        transform: scale(0);
+    }
+
+    60% {
+        transform: scale(0);
+    }
+
+    80% {
+        transform: scale(1);
+    }
+
+    to {
+        transform: scale(1);
+    }
+}
+
+@keyframes appear5 {
+    from {
+        transform: scale(0);
+    }
+
+    80% {
+        transform: scale(0);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+
+    to {
+        transform: scale(1);
+    }
+}
+
+
+.flip-one {
+    animation-name: flipOne;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+}
+
+.flip-two {
+    animation-name: flipTwo;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes flipOne {
+    from {
+        display: block;
+        transform: rotateX(90deg);
+    }
+    25%{
+        transform: rotateX(0deg);
+    }
+    50%{
+        display: none;
+        transform: rotateX(90deg);
+    }
+    to {
+        display: none;
+        transform: rotateX(90deg);
+    }
+}
+
+@keyframes flipTwo {
+    from {
+        display: none;
+        transform: rotateX(90deg);
+    }
+    50%{
+        display: none;
+        transform: rotateX(90deg);
+    }
+    75% {
+        display: block;
+        transform: rotateX(0deg);
+    }
+    to {
+        display: block;
+        transform: rotateX(90deg);
+    }
+}

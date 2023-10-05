@@ -1,6 +1,7 @@
-<form action="/auth/login" method="POST" autocomplete="on">
+<form class="auth-form" action="/auth/login" method="POST" autocomplete="on">
     <%- include('./authForm.ejs', {newPassword: false}) %>
     <div class="btn-row">
-        <input type="submit" value="Submit">
+        <a href="/blog" class="btn danger-btn">Cancel</a>
+        <input class="btn" type="submit" value="Submit">
     </div>
 </form>

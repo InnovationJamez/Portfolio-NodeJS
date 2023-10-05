@@ -9,7 +9,7 @@ const addImage = (blog, blogImgaeEncode) => {
 
     const blogImage = JSON.parse(blogImgaeEncode);
 
-    if(!imageMimeTypes.includes(blogImage.type)){
+    if (!imageMimeTypes.includes(blogImage.type)) {
         return false;
     }
 
@@ -26,16 +26,17 @@ const blog_index_get = async (req, res) => {
 
     try {
         blogs = await Blog.find({});
-        req.flash({message: 'blogs found'});
+        req.flash({ message: 'blogs found' });
 
     } catch (err) {
         blogs = [];
-        req.flash({message: `Error ${err}`});
+        req.flash({ message: `Error ${err}` });
     }
 
     res.render('blog/index', {
         user: req.user,
-        blogs: blogs
+        blogs: blogs,
+        link: "blog"
     });
 }
 
@@ -43,7 +44,8 @@ const blog_index_get = async (req, res) => {
 const blog_create_get = (req, res) => {
     res.render('blog/create', {
         user: req.user,
-        blog: new Blog
+        blog: new Blog,
+        link: "blog"
     });
 }
 
@@ -57,7 +59,7 @@ const blog_create_post = async (req, res) => {
         user: req.user.id,
     });
 
-    if(req.body.image && !addImage(blog, req.body.image)){
+    if (req.body.image && !addImage(blog, req.body.image)) {
         req.flash("error", "a non accepted file type was sent");
         return res.redirect('/blog/create');
     }
@@ -67,7 +69,7 @@ const blog_create_post = async (req, res) => {
         await blog.save();
         return res.redirect('/blog');
     }
-    catch(err){
+    catch (err) {
         req.flash("error", `An error occured: ${err}`);
         return res.redirect('/blog');
     }
@@ -89,10 +91,11 @@ const blog_details_get = async (req, res) => {
 
         res.render('blog/details', {
             user: req.user,
-            blog: blog
+            blog: blog,
+            link: "blog"
         });
     } catch (err) {
-        req.flash({message: err});
+        req.flash({ message: err });
         res.redirect('/blog');
     }
 }
@@ -105,7 +108,8 @@ const blog_edit_get = async (req, res) => {
         let blog = await Blog.findById(id);
         res.render('blog/edit', {
             user: req.user,
-            blog: blog
+            blog: blog,
+            link: "blog"
         });
     } catch {
         req.flash('error', err.message);
@@ -140,11 +144,11 @@ const blog_delete_get = async (req, res) => {
         let blog = await Blog.findById(id);
 
         res.render('blog/delete', {
-            user:req.user,
+            user: req.user,
             blog: blog
         });
     }
-    catch (err) { 
+    catch (err) {
         req.flash('error', err.message);
         res.redirect('/blog');
     }

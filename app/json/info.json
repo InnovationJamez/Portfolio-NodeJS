@@ -52,28 +52,60 @@
     ],
     "projects":[
         {
+            "name": "This website",
+            "desc": "Full stack website made with Node.Js Mongoose and Ejs. This website is created to show my projects and experience as well as a blog section so users can try out the features of this app.",
+            "list":[
+                "Passport Authentication",
+                "MmongoDb database",
+                "ejs and ejs layouts for templating"
+            ],
+            "git": "https://github.com/InnovationJamez/MazeBuilderFinal",
+            "link": "https://portfolio-328823.uc.r.appspot.com/projects"
+        },
+        {
             "name": "C++ Maze Builder",
-            "desc": "",
-            "git": "",
-            "link": ""
+            "desc": "Using C++ to delelop a maze generation tool that utilizes multiple maze generation algorythms and generates a maze svg with solution.",
+            "list":[
+                "C++ Object oriented programming",
+                "Polymorphism to reduce redundancy",
+                "Using Prim, Recersive backtrack and binary tree"
+            ],
+            "git": "https://github.com/InnovationJamez/MazeBuilderFinal",
+            "link": "https://portfolio-328823.uc.r.appspot.com/projects"
+        },
+        {
+            "name": "Library Website",
+            "desc": "Full stack website made with Node.Js Mongoose and Ejs.",
+            "list":[
+                "Node Js backend with express",
+                "ejs layouts and css",
+                "mongoose and mongoDb for database"
+            ],
+            "git": "#",
+            "link": "#"
         },
         {
             "name": "Educaitonal Website",
-            "desc": "",
-            "git": "",
-            "link": ""
+            "desc": "Educational website to teach users about electical fields and other difficult concepts in a engaging and fun way.",
+            "list":[
+                "Uses canvas and animation frame to draw ions and the illusion of movement. ",
+                "Hosted on github pages",
+                "Teaches users about electric fields, capacitors, and decimal, hex, to binery conversions."
+            ],
+            "git": "https://github.com/InnovationJamez/HTML-and-Javascript/tree/master/Showcase",
+            "link": "https://innovationjamez.github.io/HTML-and-Javascript/Showcase/"
         },
         {
             "name": "Senior Design Project",
-            "desc": "",
-            "git": "",
-            "link": ""
-        },
-        {
-            "name": "Solo Game Development Unity",
-            "desc": "",
-            "git": "",
-            "link": ""
+            "desc": "Created a website to teach about methods of water desalination. The method we decided to focus on was electro dialasis. Within the website I created a Electrodyalasis simulator to show how it works.",
+            "list":[
+                "Html JavaScript Canvas",
+                "Change parameters of simulation to learn about Electrodyalasis",
+                "Full of educational content with sources attached",
+                "Test your knowledge on the test page"
+            ],
+            "git": "https://github.com/InnovationJamez/Senior-Design",
+            "link": "https://innovationjamez.github.io/Senior-Design/"
         }
     ]
 }

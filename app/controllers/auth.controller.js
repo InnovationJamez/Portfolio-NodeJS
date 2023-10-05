@@ -1,22 +1,24 @@
 // get login page
 const loginPage = (req, res) => {
     res.render('auth/login', {
-        user: null
+        user: null,
+        link: "login"
     });
 }
 
 // get register page
 const registerPage = (req, res) => {
     res.render('auth/register', {
-        user: null
+        user: null,
+        link: "register"
     });
 }
 
 // logout route
 const logout = (req, res) => {
-    req.logout((err)=>{
-        if(err){
-            req.flash({'message': `Error: ${err}`});
+    req.logout((err) => {
+        if (err) {
+            req.flash({ 'message': `Error: ${err}` });
         }
     });
     res.redirect('/');

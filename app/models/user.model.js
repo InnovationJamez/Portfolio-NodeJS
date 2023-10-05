@@ -1,6 +1,8 @@
 const mongoose = require('mongoose');
 const bcryptjs = require('bcryptjs');
 
+const Role = require('./role.model');
+
 const userSchema = new mongoose.Schema({
     local: {
         firstName: String,

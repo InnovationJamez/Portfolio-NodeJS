@@ -20,6 +20,10 @@ nav ul li a, .nav-btn {
     color: white
 }
 
+.active {
+    color:yellow;
+}
+
 nav ul li.right-side {
     float: right;
 }
@@ -42,6 +46,19 @@ nav ul li.right-side {
 
 .nav-btn {
     border: 0px;
-    background-color: none;
+    background-color: black;
     padding: 0;
+    cursor: pointer;
+}
+
+.drop-item {
+    width: 100%;
+    background-color: black;
+    border: 1px solid white;
+    padding:1rem;
+}
+
+.drop-item:hover, .nav-btn:hover {
+    background-color: white;
+    color:black;
 }

@@ -1,11 +1,32 @@
-<% if(locals.projects && projects.length > 0){ %>
-    <div class="proj">
-        <% projects.forEach(proj => { %>
-            <div class="proj-item"><%= proj.name %></div>
-            <div class="proj-item"><%= proj.desc %></div>
-            <div class="proj-item"><%= proj.git %></div>
-            <div class="proj-item"><%= proj.link %></div>
-        <% }); %>
+<% if(locals.projects && projects.length> 0){ %>
+    <div class="proj-container">
+        <% projects.forEach(proj=> { %>
+            <div class="proj-item">
+                <h2>
+                    <%= proj.name %>
+                </h2>
+                <div class="proj-flex">
+                    <div class="proj-box">
+                        <p>
+                            <%= proj.desc %>
+                        </p>
+                    </div>
+                    <div class="proj-box">
+                        <ul>
+                            <% proj.list.forEach(item=> { %>
+                                <li>
+                                    <%= item %>
+                                </li>
+                            <% }); %>
+                        </ul>
+                    </div>
+                </div>
+                <div class="btn-row">
+                    <a target="_blank" class="btn entr-btn" href="<%= proj.git %>">GitLink</a>
+                    <a target="_blank" class="btn entr-btn" href="<%= proj.link %>">TryIt</a>
+                </div>
+            </div>
+            <% }); %>
     </div>
 <% } else { %>
     <div class="error">Failed to load projects</div>

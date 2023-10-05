@@ -88,7 +88,7 @@ module.exports = (passport) => {
     });
 
     passport.deserializeUser((id, done)=>{
-        User.findById(id)
+        User.findById(id).populate('local.role')
         .then((user)=>{
             done(null, user);
         })

@@ -1,16 +1,22 @@
 <h2>All Blogs</h2>
 
 <% if(blogs && blogs.length > 0){ %>
-    <% blogs.forEach(element => { %>
-        <div>
-            <h3><%= element.title %></h3>
-            <p><%= element.snippet %></p>
-            <a href="/blog/details/<%= element.id %>">Read</a>
-        </div>
-
-    <% }); %>
+    <div class="blog-container">
+        <% blogs.forEach(blog => { %>
+            <div class="blog-item">
+                <h2><%= blog.title %></h2> <%= blog.date %>
+                <img width="200px" src="<%= blog.coverImagePath %>">
+                <p><%= blog.snippet %></p>
+                <div class="btn-row">
+                    <a class="btn entr-btn" href="/blog/details/<%= blog.id %>">Read</a>
+                </div>
+            </div>
+        <% }); %>
+    </div>
 <% } %>
 
-<% if(user){ %>
-    <a href="/blog/create">Create Blog</a>
+<% if(user && user.local.role.name == 'moderator'){ %>
+    <div class="btn-row">
+        <a class="btn entr-btn" href="/blog/create">Create Blog</a>
+    </div>
 <% } %>
