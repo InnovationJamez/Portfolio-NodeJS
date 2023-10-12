@@ -1,5 +1,6 @@
 const db = require('../models');
 const Blog = db.blog;
+const Comment = db.comment;
 
 // legal types for adding images
 const imageMimeTypes = ['image/jpeg', 'image/png', 'image/gif'];
@@ -159,7 +160,10 @@ const blog_delete_delete = async (req, res) => {
     let id = req.params.id;
 
     try {
-        let blog = await Blog.findById(id);
+        let blog = await Blog.findById(id).populate('comments');
+        blog.comments.forEach(async (comment) => {
+            await comment.deleteOne();
+        });
         await blog.deleteOne();
         res.redirect('/blog');
     } catch (err) {

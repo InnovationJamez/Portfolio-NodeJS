@@ -1,8 +1,7 @@
-<h2>Update Blog</h2>
-
 <form class="auth-form" action="/blog/<%= blog.id %>?_method=PUT" method="POST">
     <%- include('./_blog_form.ejs') %>
 
+    <h2>Update Blog</h2>
 
     <div class="btn-row">
         <a class="btn danger-btn" href="/blog/details/<%= blog.id %>">Cancel</a>

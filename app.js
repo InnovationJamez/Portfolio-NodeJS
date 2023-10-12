@@ -12,7 +12,9 @@ const path = require('path');
 require('./app/config/passport.config')(passport);
 
 // config
-const dbUrl = require('./app/config/db.config').dbUrl;
+const config = require('./app/config/db.config')
+const dbUri = config.dbUri;
+const secret = config.sessionSecret;
 
 // database
 const db = require('./app/models');
@@ -38,7 +40,7 @@ app.use(bodyParser.urlencoded({
 }));
 app.use(express.static(path.join(__dirname, '/app/public')));
 app.use(session({
-    secret: 'supersecretputindiffilesoon',
+    secret: secret,
     resave: false,
     saveUninitialized: false
 }));
@@ -47,7 +49,7 @@ app.use(passport.session());
 app.use(flash());
 
 // connect to mongo db
-db.mongoose.connect(dbUrl, {
+db.mongoose.connect(dbUri, {
     useNewUrlParser: true
 }).then(() => {
     console.log("Successfully connected to MongoDB");

@@ -5,7 +5,7 @@
         <% blogs.forEach(blog => { %>
             <div class="blog-item">
                 <h2><%= blog.title %></h2> <%= blog.date %>
-                <img width="200px" src="<%= blog.coverImagePath %>">
+                <img style="max-width: 300px;" src="<%= blog.coverImagePath %>">
                 <p><%= blog.snippet %></p>
                 <div class="btn-row">
                     <a class="btn entr-btn" href="/blog/details/<%= blog.id %>">Read</a>

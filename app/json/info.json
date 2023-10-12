@@ -44,6 +44,12 @@
             "desc":"Studied engineering principles and theory. Developed programs and applications with C, C++, JavaScript, HTML, CSS. Constructed circuits with breadboards, resistors, IC Chips, and capacitors."
         },
         {
+            "institute":"McDonnalds",
+            "status":"Fry Cook",
+            "dates":"April 2017 - August 2017",
+            "desc":"During my summer break I worked at McDonnalds to be more eccenomically self sefficent when I retutned to school in the fall. It was a fast paced environment and success required the entire team to communicate and collaborate effectivly."
+        },
+        {
             "institute":"St. Johnsbury Academy",
             "status":"High School Diploma",
             "dates":"September 2012 - July 2016",
@@ -59,8 +65,8 @@
                 "MmongoDb database",
                 "ejs and ejs layouts for templating"
             ],
-            "git": "https://github.com/InnovationJamez/MazeBuilderFinal",
-            "link": "https://portfolio-328823.uc.r.appspot.com/projects"
+            "git": "https://github.com/InnovationJamez/Portfolio-NodeJS",
+            "link": "/"
         },
         {
             "name": "C++ Maze Builder",
@@ -71,7 +77,7 @@
                 "Using Prim, Recersive backtrack and binary tree"
             ],
             "git": "https://github.com/InnovationJamez/MazeBuilderFinal",
-            "link": "https://portfolio-328823.uc.r.appspot.com/projects"
+            "link": "https://innovationjamez.github.io/MazeBuilderFinal/"
         },
         {
             "name": "Library Website",
@@ -81,8 +87,8 @@
                 "ejs layouts and css",
                 "mongoose and mongoDb for database"
             ],
-            "git": "#",
-            "link": "#"
+            "git": "https://github.com/InnovationJamez/My-Library-Website",
+            "link": "https://library-website-8683ec46baac.herokuapp.com/"
         },
         {
             "name": "Educaitonal Website",

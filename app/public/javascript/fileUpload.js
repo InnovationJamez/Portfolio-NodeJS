@@ -4,8 +4,13 @@ FilePond.registerPlugin(
     FilePondPluginImagePreview,
 );
 
+const width = 1000;
+const height = 500;
+const ratio = height / width;
+
 FilePond.setOptions({
-    imageResizeTargetWidth: 500,
+    stylePanelAspectRatio: ratio,
+    imageResizeTargetWidth: 1000,
     imageResizeTargetHeight: 500
 });
 

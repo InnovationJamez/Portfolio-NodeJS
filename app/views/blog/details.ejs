@@ -18,13 +18,15 @@
 
             <div class="comment-item">
                 <h3>
+                    Name
                     <%= comment.user.local.firstName %>
+                    Date: 
                     <%= comment.date.toDateString() %>
                 </h3>
                 <p>
                     <%= comment.content %>
                 </p>
-                <% if(user){ %>
+                <% if(user && user.local.username === comment.user.local.username){ %>
                     <form method="POST" action="/comment/<%= comment.id %>/<%= blog.id %>?_method=DELETE">
                         <input hidden name="blogId" value="<%= blog.id %>">
                         <button class="btn danger-btn" type="submit">Delete Comment</button>

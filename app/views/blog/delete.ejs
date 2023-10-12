@@ -1,4 +1,4 @@
-<form class="auth-form">
+<form class="auth-form" method="POST" action="/blog/<%= blog.id %>?_method=DELETE">
     <h2>Delete Blog</h2>
 
     <%- include('./_blog_info.ejs') %>
@@ -6,9 +6,7 @@
     <div class="btn-row">
         <a class="btn entr-btn" href="/blog/details/<%= blog.id %>">Cancel</a>
 
-        <form method="POST" action="/blog/<%= blog.id %>?_method=DELETE">
-            <button class="btn danger-btn" type="submit">Delete</button>
-        </form>  
+        <button class="btn danger-btn" type="submit">Delete</button>
     </div>   
 </form>
 
