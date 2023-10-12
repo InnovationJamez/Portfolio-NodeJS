@@ -1,5 +1,5 @@
-const env = process.env.NODE_ENV || 'development';
-if(env !== "producation"){
+const env = process.env.NODE_ENV || 'production';
+if(env !== "development"){
     require('dotenv').config();
 }
 
